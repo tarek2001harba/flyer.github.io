@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: url(../img/woman-walking.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.triangle-topright {
+  width: 60%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #191919;
+  transform: skewX(45deg) translateX(50%);
+  opacity: 0.9;
+  animation: skew-anim-top 2s ease-out;
+  box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.5),
+    0 40px 40px -20px rgba(0, 0, 0, 0.4), 0 70px 50px -30px rgba(0, 0, 0, 0.3),
+    0 40px 60px -5px #191919;
+  z-index: -1;
+}
+
+.triangle-bottomleft {
+  width: 60%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #191919;
+  transform: skewX(45deg) translateX(-50%);
+  opacity: 0.9;
+  animation: skew-anim-bottom 2s ease-out;
+  box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.5),
+    0 40px 40px -20px rgba(0, 0, 0, 0.4), 0 70px 50px -30px rgba(0, 0, 0, 0.3),
+    0 40px 60px -5px #191919;
+}
+.form-container {
+  width: 450px;
+  height: 500px;
+  background: #fc6b67;
+  border-radius: 20px;
+  animation: form-anim 2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.5),
+    0 40px 40px -20px rgba(0, 0, 0, 0.4), 0 70px 50px -30px rgba(0, 0, 0, 0.3),
+    0 40px 60px -5px #c0514d99;
+  transform: translateX(70%);
+}
+.form-container h1 {
+  color: #e8e8e8;
+  width: 100%;
+  text-align: center;
+  margin: 0px auto 0px auto;
+  font-weight: bolder;
+}
+.form-container p {
+  color: #e8e8e8;
+  width: 95%;
+  text-align: left;
+  padding: 18px;
+  font-weight: bold;
+  font-size: 18px;
+}
+input {
+  background-color: #e8e8e8;
+  color: #191919;
+  width: 90%;
+  text-align: left;
+  padding: 18px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+}
+#signin {
+  background-color: #e8e8e8;
+  color: #fc6b67;
+  font-weight: bolder;
+  width: 175px;
+  height: 75px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+#signin:hover {
+  color: #e8e8e8;
+  background-color: #e8e8e8d0;
+}
+.form-container a {
+  color: #e8e8e8;
+  margin: 6px;
+}
+.form-container a:hover {
+  color: #e8e8e8d0;
+}
+.text-logo {
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  font-family: pacifico;
+  color: #e8e8e8;
+}
+.text-logo h1 {
+  stroke-width: 1;
+  animation: opacity-anim 2s ease-in-out;
+  font-size: 36px;
+}
+span {
+  color: #fc6b67;
+  font-weight: 800;
+}
+#logo {
+  position: absolute;
+  left: 10%;
+  top: 27.5%;
+  width: 125px;
+  height: 125px;
+  filter: drop-shadow(2px 10px 9px #fc6c67f3);
+  animation: opacity-anim 2s ease-in-out;
+}
+@keyframes form-anim {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(70%);
+    opacity: 1;
+  }
+}
+
+@keyframes skew-anim-bottom {
+  0% {
+    transform: skewX(0deg) translateX(0);
+    width: 70%;
+    opacity: 1;
+  }
+  100% {
+    transform: skewX(45deg) translateX(-50%);
+    width: 60%;
+    opacity: 0.9;
+  }
+}
+@keyframes skew-anim-top {
+  0% {
+    transform: skewX(0deg) translateX(0);
+    width: 70%;
+    opacity: 1;
+  }
+  100% {
+    transform: skewX(45deg) translateX(50%);
+    width: 60%;
+    opacity: 0.9;
+  }
+}
+
+@keyframes opacity-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .form-container {
+    transform: translateX(0);
+    animation: none;
+    z-index: 1;
+  }
+  .triangle-topright {
+    width: 100%;
+    height: 100vh;
+    background-color: #191919;
+    transform: skewX(0) translateX(-0);
+    z-index: 0;
+    opacity: 0.6;
+    animation: none;
+  }
+  .triangle-bottomleft {
+    display: none;
+  }
+  .text-logo {
+    display: none;
+  }
+  #logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .form-container {
+    width: 350px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form-container {
+    width: 300px;
+    height: 450px;
+  }
+  .form-container h1 {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+  .form-container p {
+    font-size: 16px;
+    padding: 12px;
+  }
+  #signin {
+    width: 150px;
+    height: 75px;
+  }
+}
