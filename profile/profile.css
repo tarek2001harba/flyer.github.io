@@ -169,8 +169,8 @@ nav ul {
   padding: 5%;
 }
 .profile-pic {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   margin: 0 auto;
   background-color: #191919;
@@ -180,8 +180,8 @@ nav ul {
   animation: fade-in 4s ease-out;
 }
 .profile-pic img {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   object-fit: contain;
   object-position: center;
   border-radius: 50%;
@@ -307,7 +307,6 @@ footer {
   justify-content: center;
   background-color: #e8e8e811;
   color: #e8e8e8;
-  margin-top: 5%;
   font-size: 18px;
 }
 
