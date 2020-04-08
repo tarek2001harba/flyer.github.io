@@ -88,10 +88,8 @@ body {
   position: absolute;
   left: 10%;
   top: 25.5%;
-  width: 125px;
-  height: 125px;
+  width: 200px;
 }
-
 .buttons {
   position: absolute;
   bottom: 5%;
@@ -116,27 +114,27 @@ body {
   align-items: center;
 }
 #signup {
-  background-color: #fc6b67;
+  background: linear-gradient(to right, #fc6c67, #ff7433);
   color: #e8e8e8;
   font-weight: bolder;
   box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.5),
     0 40px 40px -20px rgba(0, 0, 0, 0.4), 0 70px 50px -30px rgba(0, 0, 0, 0.3),
-    0 40px 60px -5px #c0514d99;
+    0 40px 60px -5px #ff743377;
   transition: 0.2s ease-in-out;
 }
 #signup:hover {
-  background-color: #fc6b67d0;
+  filter: brightness(90%);
 }
 #signin {
   background-color: #e8e8e8;
-  color: #fc6b67;
+  color: #ff7433;
   box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.5),
     0 40px 40px -20px rgba(0, 0, 0, 0.4), 0 70px 50px -30px rgba(0, 0, 0, 0.3),
     0 40px 60px -5px #e8e8e877;
   transition: 0.2s ease-in-out;
 }
 #signin:hover {
-  background-color: #e8e8e8d0;
+  filter: brightness(90%);
 }
 .window-border {
   position: absolute;
@@ -318,13 +316,15 @@ body {
 @media only screen and (max-width: 875px) and (min-width: 700px) {
   #logo {
     width: 200px;
-    height: 200px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .header {
     font-size: 7vw;
+  }
+  .header p {
+    transform: translateY(100%);
   }
   .text-container {
     font-size: 10vw;
@@ -333,7 +333,7 @@ body {
     flex-direction: column-reverse;
   }
   .buttons a {
-    width: 125px;
+    width: 150px;
     height: 75px;
     font-size: 22px;
     margin: 4px 8px 8px 8px;

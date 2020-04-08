@@ -19,7 +19,7 @@ body {
 .msg-container {
   width: 60%;
   min-height: 40vh;
-  background-color: #fc6b67;
+  background:#191919;
   color: #e8e8e8;
   text-align: center;
   border-radius: 20px;
@@ -34,6 +34,10 @@ body {
 .msg-container h1 {
   width: 100%;
   padding: 7.5% 2.5% 0px 2.5%;
+  color: transparent;
+  background: linear-gradient(to right, #fc6c67, #ff7433);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .msg-container p {
@@ -51,8 +55,6 @@ a:hover {
 #logo {
   margin: 18px;
   width: 250px;
-  height: 250px;
-  filter: drop-shadow(2px 10px 9px #fc6c67f3);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -87,8 +89,7 @@ a:hover {
     min-height: 30vh;
   }
   #logo {
-    width: 150px;
-    height: 150px;
+    width: 200px;
   }
   .msg-container h1 {
     font-size: 20px;

@@ -8,28 +8,32 @@
       href="https://fonts.googleapis.com/css?family=Pacifico|Poppins&display=swap"
       rel="stylesheet"
     />
-    <title>Flyer-Homepage</title>
+    <link rel="shortcut icon"  type="image/png" href="../img/logo-v2.png">
+    <title>Homepage</title>
   </head>
   <body>
     <header>
+      <div class="header-mask"></div>
       <div class="light-source"></div>
       <nav>
         <input type="checkbox" id="chk-2" />
-        <img src="../img/about/menu.svg" alt="" id="hambrguer-icon" />
-        <div class="hambrguer-menu">
+        <img src="../img/about/menu.svg" alt="menu" id="hambrguer-icon" />
+        <div class="hambrguer-menu" tabindex="0">
           <ul>
             <li>
               <a href="homepage.html" class="nav-link">Home</a>
             </li>
             <li>
-              <a class="nav-link">Search</a>
+              <a class="nav-link" href="#">Search</a>
             </li>
-
             <li>
               <a href="../about/about.html" class="nav-link">About us</a>
             </li>
             <li>
               <a href="../contact/contact.html" class="nav-link">Contact us</a>
+            </li>
+            <li>
+              <a href="../profile/profile.html" class="nav-link">Profile</a>
             </li>
           </ul>
         </div>
@@ -41,22 +45,44 @@
             <a href="homepage.html" class="nav-link">Home</a>
           </li>
           <li>
-            <a class="nav-link">Search</a>
+            <a class="nav-link" href="#">Search</a>
           </li>
-
           <li>
             <a href="../about/about.html" class="nav-link">About us</a>
           </li>
           <li>
             <a href="../contact/contact.html" class="nav-link">Contact us</a>
           </li>
+          <li>
+            <a
+              href="../profile/profile.html"
+              class="nav-link"
+              id="profile-button"
+              >Profile</a
+            >
+          </li>
         </ul>
       </nav>
       <section>
-        <img src="../img/airplane-window.jpg" alt="" id="bg" />
-        <div class="brand">
-          <h1>Flyer</h1>
-          <p>Book it, pack it, <span>and fly!</span></p>
+        <div class="why-us-slider">
+          <div class="slide">
+            <h1>Get the best deals</h1>
+            <p>We search and compare real-time prices on flights, hotels and cars so you can find the cheapest, quickest and best travel deals</p>
+          </div>
+          <div class="slide">
+            <h1>Trusted and free</h1>
+            <p>We’re completely free to use – no hidden charges or fees – and we’re endorsed by Frommer’s, CNN and the New York Times</p>
+          </div>
+          <div class="slide">
+            <h1>100% price transparency</h1>
+            <p>The prices you see are never affected by your searches, no matter how many you make. We do not use cookies to adjust or increase prices</p>
+          </div>
+        </div>
+        <div class="search-container">
+          <div class="search-panel">
+            <img src="../img/search.svg" alt="search">
+            <input type="text" placeholder="Find the best deals for your next visit">
+          </div>
         </div>
       </section>
     </header>
